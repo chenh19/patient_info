@@ -2,7 +2,7 @@
 
 #### How to use the script
 1. Open JHU SAFE desktop (VM)
-2. Go to **Crunchr > Compute**
+2. Go to **Crunchr** website, then go to **Compute**
 3. Create a new container: **RStudio**
 4. Click the name of the container to open RStudio
 5. Create an R script in RStudio, paste the script into it
