@@ -8,3 +8,4 @@
 5. Create a new R script in RStudio, paste the script into it
 6. change the **JHED_ID**, **server_name**, **db_name**
 7. Run the script
+8. Click the final zip file to download
