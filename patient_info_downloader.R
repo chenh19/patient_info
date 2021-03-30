@@ -1,11 +1,11 @@
-# install.packages(c("RODBC","filesstrings","dplyr"))
+# Install packages
+install.packages(c("RODBC","filesstrings","dplyr"))
 
-
-# load environment
+# Load packages
 lapply(c("RODBC", "filesstrings", "dplyr", "utils"), require, character.only = TRUE)
 
 
-# login with JHED ID
+# Login with JHED ID
 print(Sys.setenv(JHED = 'JHED_ID')) #Put your JHED here
 print(Sys.setenv(JHED_PWD = rstudioapi::askForPassword("")))
 
