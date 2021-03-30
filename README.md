@@ -1,4 +1,4 @@
-# Patient information downloader
+# Patient info downloader
 **An internal patient information downloader for clinical studies in [Braunstein Lab](https://www.braunstein.team/)**  
 *Current version: v1.0.0*
 
