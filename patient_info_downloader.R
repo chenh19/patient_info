@@ -11,7 +11,7 @@ print(Sys.setenv(JHED_PWD = rstudioapi::askForPassword("")))
 
 
 # Connect to SQL database
-server="Your_Server_Name"
+server="Your_Server_Name" #Change this
 db_name="Your_Database_Name" #Change this
 pwd = Sys.getenv("JHED_PWD")
 stopifnot(nzchar(pwd))
