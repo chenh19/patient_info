@@ -1,4 +1,6 @@
-## An internal patient information downloader
+## Patient information downloader
+**An internal patient information downloader for clinical studies in [Braunstein Lab](https://www.braunstein.team/)**  
+*Current version: v1.0.0*
 
 #### How to use the script
 1. Open JHU SAFE desktop (VM)
