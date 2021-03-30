@@ -1,5 +1,5 @@
 # Install packages
-install.packages(c("RODBC", "filesstrings", "dplyr", "utils"))
+install.packages(c("RODBC", "filesstrings", "dplyr"))
 
 
 # Load packages
