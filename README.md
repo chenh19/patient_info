@@ -1,4 +1,4 @@
-## An internal patient info downloader
+## An internal patient information downloader
 
 #### How to use the script
 1. Open JHU SAFE desktop (VM)
