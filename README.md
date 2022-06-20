@@ -1,5 +1,5 @@
 # Patient info downloader
-**An internal patient information downloader for clinical studies for Gloria.  
+**An internal patient information downloader for clinical studies for **Gloria**.  
 *Current version: v1.0.0*
 
 ## How to use the script
