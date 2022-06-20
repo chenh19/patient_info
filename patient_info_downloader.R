@@ -2,7 +2,7 @@
 # Current version: v1.1.2
 
 
-# Install and load packages
+# Install and load required packages
 install.packages(c("RODBC", "filesstrings", "dplyr", "svDialogs"))
 Sys.sleep(1)
 lapply(c("RODBC", "filesstrings", "dplyr", "svDialogs", "utils"), require, character.only = TRUE)
