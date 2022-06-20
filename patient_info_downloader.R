@@ -7,7 +7,7 @@ lapply(c("RODBC", "filesstrings", "dplyr", "utils"), require, character.only = T
 
 
 # Login with JHED ID
-print(Sys.setenv(JHED = 'JHED_ID'))  # Change this
+print(Sys.setenv(JHED = 'Your_JHED_ID'))  # Change this
 print(Sys.setenv(JHED_PWD = rstudioapi::askForPassword("")))
 
 
