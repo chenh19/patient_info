@@ -7,7 +7,7 @@
 2. Go to **Crunchr** website, then go to **Compute**
 3. Create a new container: **PMAP RStudio**
 4. Click the name of the container to open RStudio
-5. Create a new R script in RStudio, paste the script into it
+5. Create a new R script in RStudio, paste the [**raw script**](https://raw.githubusercontent.com/chenh19/patient_info/main/patient_info_downloader.R) into it
 6. change the **JHED_ID**, **server_name**, **db_name**
 7. Run the script
 8. Click the "**all_tables.zip**" in the **Files** panel (bottom right) to download
