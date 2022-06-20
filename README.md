@@ -8,6 +8,6 @@
 3. Create a new container: **PMAP RStudio**
 4. Click the name of the container to open RStudio
 5. Create a new R script in RStudio, paste the [**raw script**](https://raw.githubusercontent.com/chenh19/patient_info/main/patient_info_downloader.R) into it
-6. **Source** the script
+6. Click **Source** to the execute the entire script
 7. Enter your **JHED_ID**, **JHED_ID password**, **server_name**, and **db_name** following the prompts
 8. Click the "**all_tables.zip**" in the **Files** panel (bottom right) to download
