@@ -1,6 +1,7 @@
 # This script downloads IRB-approved patient information for clinical studies
 # Current version: v1.1.0
 
+
 # Install and load packages
 install.packages(c("RODBC", "filesstrings", "dplyr", "svDialogs"))
 lapply(c("RODBC", "filesstrings", "dplyr", "svDialogs", "utils"), require, character.only = TRUE)
@@ -21,8 +22,7 @@ stopifnot(nzchar(pwd))
 JHED = Sys.getenv("JHED")
 stopifnot(nzchar(pwd))
 connectionString <- paste0("Driver=freeTDS;TDS_Version=8.0;",'Server=',server,';Port=1433;Database=',
-                           db_name,'; Uid=win\\',Sys.getenv("JHED"),
-                           ';Pwd=',Sys.getenv("JHED_PWD"))
+                           db_name,'; Uid=win\\',Sys.getenv("JHED"),';Pwd=',Sys.getenv("JHED_PWD"))
 con <- odbcDriverConnect(connection=connectionString)
 Sys.sleep(1)
 
