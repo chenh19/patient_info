@@ -10,17 +10,16 @@ Sys.sleep(1)
 
 # Connect to SQL database with JHED ID
 print(Sys.setenv(JHED = dlgInput("Please enter your JHED ID:", Sys.info()[""])$res))
+JHED = Sys.getenv("JHED")
 Sys.sleep(1)
 print(Sys.setenv(JHED_PWD = rstudioapi::askForPassword("")))
+pwd = Sys.getenv("JHED_PWD")
+stopifnot(nzchar(pwd))
 Sys.sleep(1)
 server = dlgInput("Please enter the Server name:", Sys.info()[""])$res
 Sys.sleep(1)
 db_name = dlgInput("Please enter the Database name:", Sys.info()[""])$res
 Sys.sleep(1)
-JHED = Sys.getenv("JHED")
-stopifnot(nzchar(JHED))
-pwd = Sys.getenv("JHED_PWD")
-stopifnot(nzchar(pwd))
 connectionString <- paste0("Driver=freeTDS;TDS_Version=8.0;",'Server=',server,';Port=1433;Database=',
                            db_name,'; Uid=win\\',Sys.getenv("JHED"),';Pwd=',Sys.getenv("JHED_PWD"))
 con <- odbcDriverConnect(connection=connectionString)
@@ -48,6 +47,7 @@ for (tab_name in tab_names){
   Sys.sleep(1)
 }
 close(con) #close the connection when done
+Sys.sleep(1)
 
 
 # Export all tables in a single zip file
