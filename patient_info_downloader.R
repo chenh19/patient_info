@@ -1,5 +1,5 @@
 # This script downloads IRB-approved patient information for clinical studies
-# Current version: v1.1.0
+# Current version: v1.1.2
 
 
 # Install and load packages
