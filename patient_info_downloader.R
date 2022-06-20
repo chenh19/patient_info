@@ -27,7 +27,7 @@ con <- odbcDriverConnect(connection=connectionString)
 Sys.sleep(1)
 
 
-# Access the tables
+# Find all the tables
 tabs <- sqlTables(con) #Prints out list of tables; use tables w/ dbo schema
 tabs <- filter(tabs, TABLE_TYPE == "TABLE")
 tabs <- filter(tabs, TABLE_SCHEM == "dbo")
@@ -36,7 +36,7 @@ tab_names <- read.csv("all_tables.csv")[,"TABLE_NAME"]
 Sys.sleep(1)
 
 
-# Download the tables
+# Download all the tables
 if (dir.exists("Tables") == FALSE){
   dir.create("Tables")
 }
@@ -51,7 +51,7 @@ close(con) #close the connection when done
 Sys.sleep(1)
 
 
-# Export all tables in a single zip file
+# Export all the tables in a single zip file
 files2zip <- dir('Tables', full.name=TRUE)
 zip(zipfile = 'all_tables', files = files2zip)
 Sys.sleep(1)
