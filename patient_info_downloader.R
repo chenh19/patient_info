@@ -50,7 +50,7 @@ for (tab_name in tab_names){
 close(con) #close the connection when done
 
 
-# Compress all csv files into one zip file
+# Export all tables in a single zip file
 files2zip <- dir('Tables', full.name=TRUE)
 zip(zipfile = 'all_tables', files = files2zip)
 Sys.sleep(1)
