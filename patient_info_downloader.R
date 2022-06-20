@@ -7,13 +7,13 @@ lapply(c("RODBC", "filesstrings", "dplyr", "utils"), require, character.only = T
 
 
 # Login with JHED ID
-print(Sys.setenv(JHED = 'JHED_ID')) #Put your JHED here
+print(Sys.setenv(JHED = 'JHED_ID'))  # Change this
 print(Sys.setenv(JHED_PWD = rstudioapi::askForPassword("")))
 
 
 # Connect to SQL database
-server="Your_Server_Name" #Change this
-db_name="Your_Database_Name" #Change this
+server="Your_Server_Name"  # Change this
+db_name="Your_Database_Name"  # Change this
 pwd = Sys.getenv("JHED_PWD")
 stopifnot(nzchar(pwd))
 JHED = Sys.getenv("JHED")
