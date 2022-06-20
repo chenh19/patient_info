@@ -2,7 +2,7 @@
 **An internal patient information downloader for clinical studies (for Gloria)**.  
 *Current version: v1.1.0*
 
-## How to use the script
+## How to use
 1. Open **JHU SAFE desktop** (VM)
 2. Go to **Crunchr** website, then go to **Compute**
 3. Create a new container: **PMAP RStudio**
