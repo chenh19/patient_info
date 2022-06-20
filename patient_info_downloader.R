@@ -1,7 +1,6 @@
 # This script downloads IRB-approved patient information for clinical studies
 # Current version: v1.1.0
 
-
 # Install and load packages
 install.packages(c("RODBC", "filesstrings", "dplyr", "svDialogs"))
 lapply(c("RODBC", "filesstrings", "dplyr", "svDialogs", "utils"), require, character.only = TRUE)
@@ -52,6 +51,7 @@ close(con) #close the connection when done
 # Compress all csv files into one zip file
 files2zip <- dir('Tables', full.name=TRUE)
 zip(zipfile = 'all_tables', files = files2zip)
+Sys.sleep(1)
 rm(list = ls())
 Sys.unsetenv(c("JHED","JHED_PWD"))
 Sys.sleep(1)
