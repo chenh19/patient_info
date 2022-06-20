@@ -9,9 +9,13 @@ lapply(c("RODBC", "filesstrings", "dplyr", "svDialogs", "utils"), require, chara
 
 # Connect to SQL database with JHED ID
 print(Sys.setenv(JHED = dlgInput("Please enter your JHED ID:", Sys.info()[""])$res))
+Sys.sleep(1)
 print(Sys.setenv(JHED_PWD = rstudioapi::askForPassword("")))
+Sys.sleep(1)
 server = dlgInput("Please enter the Server name:", Sys.info()[""])$res
+Sys.sleep(1)
 db_name = dlgInput("Please enter the Database name:", Sys.info()[""])$res
+Sys.sleep(1)
 pwd = Sys.getenv("JHED_PWD")
 stopifnot(nzchar(pwd))
 JHED = Sys.getenv("JHED")
@@ -28,10 +32,13 @@ tabs <- filter(tabs, TABLE_TYPE == "TABLE")
 tabs <- filter(tabs, TABLE_SCHEM == "dbo")
 write.table(tabs, file="all_tables.csv", sep=",", row.names = FALSE)
 tab_names <- read.csv("all_tables.csv")[,"TABLE_NAME"]
+Sys.sleep(1)
 
 
 # Download the tables
-dir.create("Tables")
+if (dir.exists("Tables")==FALSE){
+  dir.create("Tables")
+}
 for (tab_name in tab_names){
   df <- sqlFetch(con, tab_name)
   filename <- paste0(tab_name, ".csv")
@@ -47,4 +54,5 @@ files2zip <- dir('Tables', full.name=TRUE)
 zip(zipfile = 'all_tables', files = files2zip)
 rm(list = ls())
 Sys.unsetenv(c("JHED","JHED_PWD"))
+Sys.sleep(1)
 dlgMessage('All done! Click "all_tables.zip" in Files panel to download')
