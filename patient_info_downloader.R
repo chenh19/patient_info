@@ -1,15 +1,15 @@
 # This script downloads IRB-approved patient information for clinical studies
 # v1.1.0
 
+
 # Install and load packages
 install.packages(c("RODBC", "filesstrings", "dplyr", "svDialogs"))
 lapply(c("RODBC", "filesstrings", "dplyr", "svDialogs", "utils"), require, character.only = TRUE)
 
-# Login with JHED ID
+
+# Connect to SQL database with JHED ID
 print(Sys.setenv(JHED = dlgInput("Please enter your JHED ID:", Sys.info()[""])$res))
 print(Sys.setenv(JHED_PWD = rstudioapi::askForPassword("")))
-
-# Connect to SQL database
 server = dlgInput("Please enter the Server name:", Sys.info()[""])$res
 db_name = dlgInput("Please enter the Database name:", Sys.info()[""])$res
 pwd = Sys.getenv("JHED_PWD")
@@ -21,12 +21,14 @@ connectionString <- paste0("Driver=freeTDS;TDS_Version=8.0;",'Server=',server,';
                            ';Pwd=',Sys.getenv("JHED_PWD"))
 con <- odbcDriverConnect(connection=connectionString)
 
+
 # Access the tables
 tabs <- sqlTables(con) #Prints out list of tables; use tables w/ dbo schema
 tabs <- filter(tabs, TABLE_TYPE == "TABLE")
 tabs <- filter(tabs, TABLE_SCHEM == "dbo")
 write.table(tabs, file="all_tables.csv", sep=",", row.names = FALSE)
 tab_names <- read.csv("all_tables.csv")[,"TABLE_NAME"]
+
 
 # Download the tables
 dir.create("Tables")
@@ -38,6 +40,7 @@ for (tab_name in tab_names){
   Sys.sleep(1)
 }
 close(con) #close the connection when done
+
 
 # Compress all csv files into one zip file
 files2zip <- dir('Tables', full.name=TRUE)
