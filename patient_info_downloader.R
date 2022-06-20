@@ -1,3 +1,6 @@
+# This script downloads IRB-approved patient information for clinical studies
+# v1.1.0
+
 # Install packages
 install.packages(c("RODBC", "filesstrings", "dplyr"))
 
