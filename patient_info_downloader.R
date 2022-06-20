@@ -17,9 +17,9 @@ server = dlgInput("Please enter the Server name:", Sys.info()[""])$res
 Sys.sleep(1)
 db_name = dlgInput("Please enter the Database name:", Sys.info()[""])$res
 Sys.sleep(1)
-pwd = Sys.getenv("JHED_PWD")
-stopifnot(nzchar(pwd))
 JHED = Sys.getenv("JHED")
+stopifnot(nzchar(JHED))
+pwd = Sys.getenv("JHED_PWD")
 stopifnot(nzchar(pwd))
 connectionString <- paste0("Driver=freeTDS;TDS_Version=8.0;",'Server=',server,';Port=1433;Database=',
                            db_name,'; Uid=win\\',Sys.getenv("JHED"),';Pwd=',Sys.getenv("JHED_PWD"))
