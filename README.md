@@ -10,4 +10,4 @@
 5. Create a new R script in RStudio, paste in the [**raw script**](https://raw.githubusercontent.com/chenh19/patient_info/main/patient_info_downloader.R)
 6. Click **Source** to the execute the entire script
 7. Enter your **JHED_ID**, **JHED_ID password**, **server_name**, and **db_name** following the prompts
-8. Click on the "**all_tables.zip**" in the **Files** panel (bottom right) to download
+8. Click on "**all_tables.zip**" in the **Files** panel (bottom right) to download
