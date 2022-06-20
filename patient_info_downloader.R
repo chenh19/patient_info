@@ -47,3 +47,4 @@ close(con) #close the connection when done
 # Compress all csv files into one zip file
 files2zip <- dir('Tables', full.name=TRUE)
 zip(zipfile = 'all_tables', files = files2zip)
+print("All done! Please click to download "all_tables.zip" in the Files panel -->")
