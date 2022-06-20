@@ -37,7 +37,7 @@ Sys.sleep(1)
 
 
 # Download the tables
-if (dir.exists("Tables")==FALSE){
+if (dir.exists("Tables") == FALSE){
   dir.create("Tables")
 }
 for (tab_name in tab_names){
