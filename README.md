@@ -1,6 +1,6 @@
 # Patient info downloader
 **An internal patient information downloader for clinical studies (for Gloria)**.  
-*Current version: v1.0.0*
+*Current version: v1.0.1*
 
 ## How to use the script
 1. Open **JHU SAFE desktop** (VM)
