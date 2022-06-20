@@ -1,6 +1,7 @@
 # This script downloads IRB-approved patient information for clinical studies
 # Current version: v1.1.0
 
+
 # Install and load packages
 install.packages(c("RODBC", "filesstrings", "dplyr", "svDialogs"))
 Sys.sleep(1)
