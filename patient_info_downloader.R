@@ -4,6 +4,7 @@
 # Install and load packages
 install.packages(c("RODBC", "filesstrings", "dplyr", "svDialogs"))
 lapply(c("RODBC", "filesstrings", "dplyr", "svDialogs", "utils"), require, character.only = TRUE)
+Sys.sleep(1)
 
 
 # Connect to SQL database with JHED ID
@@ -23,6 +24,7 @@ connectionString <- paste0("Driver=freeTDS;TDS_Version=8.0;",'Server=',server,';
                            db_name,'; Uid=win\\',Sys.getenv("JHED"),
                            ';Pwd=',Sys.getenv("JHED_PWD"))
 con <- odbcDriverConnect(connection=connectionString)
+Sys.sleep(1)
 
 
 # Access the tables
