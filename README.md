@@ -1,5 +1,5 @@
 # Patient info downloader
-**An internal patient information downloader for clinical studies (for Gloria)**.  
+**A JHU internal patient information downloader for clinical studies (for Gloria)**.  
 *Current version: v1.1.0*
 
 ## How to use
