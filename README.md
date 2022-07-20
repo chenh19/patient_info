@@ -1,6 +1,8 @@
 # Patient info downloader
 **A JHU internal patient information downloader for clinical studies (for Gloria)**.  
 *Current version: v1.1.2*
+  
+[![DOI](https://zenodo.org/badge/353114862.svg)](https://doi.org/10.5281/zenodo.6870818)
 
 ## How to use
 1. Open **JHU SAFE desktop** (VM)
